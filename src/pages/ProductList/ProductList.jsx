@@ -255,11 +255,11 @@ const ProductList = () => {
             <div className="product-actions">
               <Link to={`/edit-product/${product.id}`}>
                 <button className="edit-button">
-                  <i className="fas fa-edit"></i> Edit
+                  <i className="fas fa-edit"></i> 
                 </button>
               </Link>
               <button className="delete-button" onClick={(event) => deleteProduct(product.id, event)}>
-                <i className="fas fa-trash-alt"></i> Delete
+                <i className="fas fa-trash-alt"></i> 
               </button>
             </div>
           </li>

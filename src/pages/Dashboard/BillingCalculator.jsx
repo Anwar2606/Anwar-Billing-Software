@@ -1220,7 +1220,7 @@ return productName.includes(term) || productCode.includes(term);
           value={searchTerm}
           onChange={handleSearch}
           className="search-input"
-        />
+        /><br/>
             <select className="custom-select" value={category} onChange={handleCategoryChange}>
         <option value="">All Products</option>
         <option value="ONE & TWO SOUND CRACKERS">ONE & TWO SOUND CRACKERS</option>
@@ -1246,10 +1246,10 @@ return productName.includes(term) || productCode.includes(term);
         <option value="DIGITAL LAR (WALA)">DIGITAL LAR (WALA)</option>
         <option value="PEPPER BOMB">PEPPER BOMB</option>
         <option value="GIFT BOX VARIETIES">GIFT BOX VARIETIES</option>
-      </select>
+      </select><br/>
         <ul>
           {filteredProducts.map(product => (
-            <li key={product.id}>
+           <li key={product.id}> 
               <div className="product-details">
                 <span>{product.name}</span>
                 
