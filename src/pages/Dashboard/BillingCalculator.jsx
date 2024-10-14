@@ -1274,7 +1274,7 @@ return productName.includes(term) || productCode.includes(term);
                   onChange={(e) => handleQuantityChange(item.productId, e.target.value)}
                 />
                 <span>Rs. {item.saleprice ? (item.saleprice * item.quantity).toFixed(2) : '0.00'}</span>
-                <button className="remove-button" onClick={() => handleRemoveFromCart(item.productId)}>Remove</button>
+                <button className="remove-button" onClick={() => handleRemoveFromCart(item.productId)}>X</button>
               </div>
             </li>
           ))}
