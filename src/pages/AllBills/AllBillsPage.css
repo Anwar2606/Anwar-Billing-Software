@@ -1,48 +1,147 @@
 .all-bills-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.bills-table th,
+.bills-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.bills-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.bills-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bills-table tr:hover {
+  background-color: #f1f1f1;
+}
+.icons-container {
+  display: flex;  /* Aligns the icons horizontally */
+  align-items: center;  /* Vertically centers the icons if they have different heights */
+  justify-content: flex-start;  /* Ensures icons are aligned to the left by default */
+}
+
+.download-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.delete-icon {
+  color: red;
+}
+
+/* Optionally adjust spacing between icons if needed */
+.icons-container .download-icon {
+  margin-right: 8px;  /* Reduce the margin between icons */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .icons-container {
+    justify-content: center;  /* Centers icons horizontally on medium screens */
+    margin-top: 10px;  /* Add some margin to the top of the icon container */
   }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .bills-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  .bills-table th,
-  .bills-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .bills-table th {
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .bills-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .bills-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+
   .download-icon,
   .delete-icon {
-    cursor: pointer;
-    margin-right: 10px;
+    font-size: 16px;  /* Reduce the size of the icons on smaller screens */
+    margin-right: 6px;  /* Adjust spacing between icons */
+  }
+
+  /* Stack icons vertically on very small screens */
+  .icons-container {
+    flex-direction: column;
+    align-items: center;  /* Centers icons vertically on small screens */
+  }
+
+  .download-icon {
+    margin-bottom: 8px;  /* Space between icons when stacked */
+  }
+}
+
+@media (max-width: 480px) {
+  .download-icon,
+  .delete-icon {
+    font-size: 14px;  /* Further reduce icon size on smaller screens */
+    margin-right: 4px;  /* Further reduce spacing between icons */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .all-bills-page {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .bills-table {
+    font-size: 14px;  /* Reduce font size for small screens */
+  }
+
+  .bills-table th, 
+  .bills-table td {
+    padding: 6px;  /* Reduce padding */
+  }
+
+  .bills-table td {
+    word-wrap: break-word;  /* Ensure long text breaks and doesn't overflow */
+  }
+
+  /* Remove block styling to keep rows aligned in a straight line */
+  .bills-table th,
+  .bills-table td {
+    display: table-cell;  /* Keep the cells as table cells */
+    text-align: left;
+    width: auto;
+  }
+
+  .bills-table tr {
+    display: table-row;  /* Ensure rows stay aligned horizontally */
+  }
+
+  .download-icon, .delete-icon {
+    font-size: 16px;  /* Adjust icon size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
     font-size: 18px;
   }
-  
-  .delete-icon {
-    color: red;
+
+  .bills-table {
+    font-size: 12px;  /* Further reduce font size on smaller screens */
   }
-  
+
+  .bills-table th, .bills-table td {
+    padding: 4px;  /* Further reduce padding */
+  }
+
+  .download-icon, .delete-icon {
+    font-size: 14px;  /* Further reduce icon size */
+  }
+}
