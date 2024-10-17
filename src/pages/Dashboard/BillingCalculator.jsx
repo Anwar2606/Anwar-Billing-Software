@@ -1255,7 +1255,7 @@ return productName.includes(term) || productCode.includes(term);
                 
                 <span> {`(Sales Rs. ${product.saleprice ? product.saleprice.toFixed(2) : '0.00'})`}</span>
               </div>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              <button onClick={() => addToCart(product)}>+</button>
             </li>
           ))}
         </ul>

@@ -180,6 +180,93 @@ const ProductList = () => {
     setSelectAll(false);
   };
 
+  // return (
+  //   <div className="product-list-container">
+  //     <h2 className="product-list-title">Product List</h2>
+  //     <input
+  //       type="text"
+  //       className="product-list-input"
+  //       placeholder="Search products"
+  //       value={searchTerm}
+  //       onChange={handleSearch}
+  //     />
+  //     <select className="custom-select" value={category} onChange={handleCategoryChange}>
+  //     <option value="" >All Category</option>
+  //             <option value="ONE SOUND CRACKERS">ONE SOUND CRACKERS</option>
+  //             <option value="SPARKLERS RAMS HQ">SPARKLERS RAMS HQ</option>
+  //             <option value="RAMESH SPARKLERS SPL">RAMESH SPARKLERS SPL</option>
+  //             <option value="FLOWER POTS HQ">FLOWER POTS HQ</option>
+  //             <option value="FLOWER POTS VARSHINI">FLOWER POTS VARSHINI</option>
+  //             <option value="GROUND CHAKKARS VARSHINI">GROUND CHAKKARS VARSHINI</option>
+  //             <option value="FANCY CHAKKARS ">FANCY CHAKKARS</option>
+  //             <option value="MUD POTS MERCURY  SPL">MUD POTS MERCURY  SPL</option>
+  //             <option value="T.STARS / CANDLE / PENCIL">T.STARS / CANDLE / PENCIL</option>
+  //             <option value="DIGITAL WALAS">DIGITAL WALAS</option>
+  //             <option value="STARVELL COLOURFUL COLLECTIONS">STARVELL COLOURFUL COLLECTIONS</option>
+  //             <option value="DAMO FW KIDS NEW COLLECTIONS">DAMO FW KIDS NEW COLLECTIONS</option>
+  //             <option value="VANITHA FIREWORKS">VANITHA FIREWORKS</option>
+  //             <option value="CHANK BRAND RAVINDRA FW">CHANK BRAND RAVINDRA FW</option>
+  //             <option value="COLOURFUL PEACOCK COLLECTION">COLOURFUL PEACOCK COLLECTIO</option>
+  //             <option value="RAMESH COLOUR MATCHES">RAMESH COLOUR MATCHES</option>
+  //             <option value="ASSORTED KIDS FANCY SPL ">ASSORTED KIDS FANCY SPL</option>
+  //             <option value="ASSORTED FANCY NOVELTIES">ASSORTED FANCY NOVELTIES</option>
+  //             <option value="FANCY FOUNTAINS">FANCY FOUNTAINS</option>
+  //             <option value="BOMBS">BOMBS</option>
+  //             <option value="MULTIPLE MULTI COLOUR SHOTS">MULTIPLE MULTI COLOUR SHOTS</option>
+  //             <option value="MEGA PREMIUM SINGLE PIPES">MEGA PREMIUM SINGLE PIPES</option>
+  //             <option value="WILLOW'S FOCUS SPL GIFT BOXES ">WILLOW'S FOCUS SPL GIFT BOXES</option>
+  //     </select>
+  //     <div className="button-row">
+  //       <button className="select-all-button" onClick={handleSelectAll}>
+  //         {selectAll ? "Deselect All" : "Select All"}
+  //       </button>
+  //       <button className="bulk-delete-button" onClick={bulkDeleteProducts}>
+  //         <i className="fas fa-trash-alt"></i> Bulk Delete
+  //       </button>
+  //       <button className="bulk-new-button" onClick={handleNewProductClick} style={{ position: "relative", left: "600px" }}>
+  //         <i className="fa fa-plus-circle"></i> New
+  //       </button>
+  //       <button className="bulk-upload-button" onClick={handleBulkUploadClick} style={{ position: "relative", left: "610px" }}>
+  //         <i className="fa fa-upload"></i> Bulk Upload
+  //       </button>
+  //       <button className="download-button2" onClick={downloadPDF} style={{ position: "relative", left: "620px" }}>
+  //         <i className="fa fa-download"></i> Download PDF
+  //       </button>
+  //     </div>
+  //     <ul className="product-list">
+  //       {filteredProducts.map((product) => (
+  //         <li key={product.id} className="product-item">
+  //           <input
+  //             type="checkbox"
+  //             className="product-checkbox"
+  //             checked={selectedProducts.includes(product.id)}
+  //             onChange={(event) => handleSelectProduct(event, product.id)}
+  //           />
+  //           <div className="product-info" onClick={() => toggleDescription(product.id)}>
+  //             <div className="products-details">
+  //               <div className="product-name">{product.name}</div>
+  //               {product.expanded && (
+  //                 <div className="product-description">{product.description}</div>
+  //               )}
+  //               <div className="product-price">Regular price: ₹{product.regularprice.toFixed(2)}</div>
+  //               <div className="product-price">Sales price: ₹{product.saleprice.toFixed(2)}</div>
+  //             </div>
+  //           </div>
+  //           <div className="product-actions">
+  //             <Link to={`/edit-product/${product.id}`}>
+  //               <button className="edit-button">
+  //                 <i className="fas fa-edit"></i> 
+  //               </button>
+  //             </Link>
+  //             <button className="delete-button" onClick={(event) => deleteProduct(product.id, event)}>
+  //               <i className="fas fa-trash-alt"></i> 
+  //             </button>
+  //           </div>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
   return (
     <div className="product-list-container">
       <h2 className="product-list-title">Product List</h2>
@@ -191,30 +278,8 @@ const ProductList = () => {
         onChange={handleSearch}
       />
       <select className="custom-select" value={category} onChange={handleCategoryChange}>
-      <option value="" >All Category</option>
-              <option value="ONE SOUND CRACKERS">ONE SOUND CRACKERS</option>
-              <option value="SPARKLERS RAMS HQ">SPARKLERS RAMS HQ</option>
-              <option value="RAMESH SPARKLERS SPL">RAMESH SPARKLERS SPL</option>
-              <option value="FLOWER POTS HQ">FLOWER POTS HQ</option>
-              <option value="FLOWER POTS VARSHINI">FLOWER POTS VARSHINI</option>
-              <option value="GROUND CHAKKARS VARSHINI">GROUND CHAKKARS VARSHINI</option>
-              <option value="FANCY CHAKKARS ">FANCY CHAKKARS</option>
-              <option value="MUD POTS MERCURY  SPL">MUD POTS MERCURY  SPL</option>
-              <option value="T.STARS / CANDLE / PENCIL">T.STARS / CANDLE / PENCIL</option>
-              <option value="DIGITAL WALAS">DIGITAL WALAS</option>
-              <option value="STARVELL COLOURFUL COLLECTIONS">STARVELL COLOURFUL COLLECTIONS</option>
-              <option value="DAMO FW KIDS NEW COLLECTIONS">DAMO FW KIDS NEW COLLECTIONS</option>
-              <option value="VANITHA FIREWORKS">VANITHA FIREWORKS</option>
-              <option value="CHANK BRAND RAVINDRA FW">CHANK BRAND RAVINDRA FW</option>
-              <option value="COLOURFUL PEACOCK COLLECTION">COLOURFUL PEACOCK COLLECTIO</option>
-              <option value="RAMESH COLOUR MATCHES">RAMESH COLOUR MATCHES</option>
-              <option value="ASSORTED KIDS FANCY SPL ">ASSORTED KIDS FANCY SPL</option>
-              <option value="ASSORTED FANCY NOVELTIES">ASSORTED FANCY NOVELTIES</option>
-              <option value="FANCY FOUNTAINS">FANCY FOUNTAINS</option>
-              <option value="BOMBS">BOMBS</option>
-              <option value="MULTIPLE MULTI COLOUR SHOTS">MULTIPLE MULTI COLOUR SHOTS</option>
-              <option value="MEGA PREMIUM SINGLE PIPES">MEGA PREMIUM SINGLE PIPES</option>
-              <option value="WILLOW'S FOCUS SPL GIFT BOXES ">WILLOW'S FOCUS SPL GIFT BOXES</option>
+        <option value="">All Category</option>
+        {/* Add your options */}
       </select>
       <div className="button-row">
         <button className="select-all-button" onClick={handleSelectAll}>
@@ -223,13 +288,13 @@ const ProductList = () => {
         <button className="bulk-delete-button" onClick={bulkDeleteProducts}>
           <i className="fas fa-trash-alt"></i> Bulk Delete
         </button>
-        <button className="bulk-new-button" onClick={handleNewProductClick} style={{ position: "relative", left: "600px" }}>
+        <button className="bulk-new-button" onClick={handleNewProductClick}>
           <i className="fa fa-plus-circle"></i> New
         </button>
-        <button className="bulk-upload-button" onClick={handleBulkUploadClick} style={{ position: "relative", left: "610px" }}>
+        <button className="bulk-upload-button" onClick={handleBulkUploadClick}>
           <i className="fa fa-upload"></i> Bulk Upload
         </button>
-        <button className="download-button2" onClick={downloadPDF} style={{ position: "relative", left: "620px" }}>
+        <button className="download-button2" onClick={downloadPDF}>
           <i className="fa fa-download"></i> Download PDF
         </button>
       </div>
@@ -245,9 +310,7 @@ const ProductList = () => {
             <div className="product-info" onClick={() => toggleDescription(product.id)}>
               <div className="products-details">
                 <div className="product-name">{product.name}</div>
-                {product.expanded && (
-                  <div className="product-description">{product.description}</div>
-                )}
+                {product.expanded && <div className="product-description">{product.description}</div>}
                 <div className="product-price">Regular price: ₹{product.regularprice.toFixed(2)}</div>
                 <div className="product-price">Sales price: ₹{product.saleprice.toFixed(2)}</div>
               </div>
@@ -255,11 +318,11 @@ const ProductList = () => {
             <div className="product-actions">
               <Link to={`/edit-product/${product.id}`}>
                 <button className="edit-button">
-                  <i className="fas fa-edit"></i> 
+                  <i className="fas fa-edit"></i>
                 </button>
               </Link>
               <button className="delete-button" onClick={(event) => deleteProduct(product.id, event)}>
-                <i className="fas fa-trash-alt"></i> 
+                <i className="fas fa-trash-alt"></i>
               </button>
             </div>
           </li>
@@ -267,6 +330,7 @@ const ProductList = () => {
       </ul>
     </div>
   );
+  
 };
 
 export default ProductList;

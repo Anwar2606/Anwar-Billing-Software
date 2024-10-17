@@ -34,10 +34,11 @@ h1 {
 .bills-table tr:hover {
   background-color: #f1f1f1;
 }
+
 .icons-container {
-  display: flex;  /* Aligns the icons horizontally */
-  align-items: center;  /* Vertically centers the icons if they have different heights */
-  justify-content: flex-start;  /* Ensures icons are aligned to the left by default */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .download-icon,
@@ -51,41 +52,32 @@ h1 {
   color: red;
 }
 
-/* Optionally adjust spacing between icons if needed */
 .icons-container .download-icon {
-  margin-right: 8px;  /* Reduce the margin between icons */
+  margin-right: 8px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .icons-container {
-    justify-content: center;  /* Centers icons horizontally on medium screens */
-    margin-top: 10px;  /* Add some margin to the top of the icon container */
-  }
-
-  .download-icon,
-  .delete-icon {
-    font-size: 16px;  /* Reduce the size of the icons on smaller screens */
-    margin-right: 6px;  /* Adjust spacing between icons */
-  }
-
-  /* Stack icons vertically on very small screens */
-  .icons-container {
-    flex-direction: column;
-    align-items: center;  /* Centers icons vertically on small screens */
-  }
-
-  .download-icon {
-    margin-bottom: 8px;  /* Space between icons when stacked */
-  }
+/* Date Filter */
+.date-filter {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  margin-bottom: 20px;
+  align-items: flex-start;
+  text-align: left; /* Ensure label text is aligned to the left */
 }
 
-@media (max-width: 480px) {
-  .download-icon,
-  .delete-icon {
-    font-size: 14px;  /* Further reduce icon size on smaller screens */
-    margin-right: 4px;  /* Further reduce spacing between icons */
-  }
+.date-filter label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date-filter input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make the input take full width */
+  box-sizing: border-box; /* Prevent input from overflowing */
 }
 
 /* Responsive Styles */
@@ -99,32 +91,55 @@ h1 {
   }
 
   .bills-table {
-    font-size: 14px;  /* Reduce font size for small screens */
+    font-size: 14px;
   }
 
   .bills-table th, 
   .bills-table td {
-    padding: 6px;  /* Reduce padding */
+    padding: 6px;
   }
 
   .bills-table td {
-    word-wrap: break-word;  /* Ensure long text breaks and doesn't overflow */
+    word-wrap: break-word;
   }
 
-  /* Remove block styling to keep rows aligned in a straight line */
   .bills-table th,
   .bills-table td {
-    display: table-cell;  /* Keep the cells as table cells */
+    display: table-cell;
     text-align: left;
     width: auto;
   }
 
   .bills-table tr {
-    display: table-row;  /* Ensure rows stay aligned horizontally */
+    display: table-row;
   }
 
   .download-icon, .delete-icon {
-    font-size: 16px;  /* Adjust icon size for mobile */
+    font-size: 16px;
+    margin-right: 6px;
+  }
+
+  .icons-container {
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-icon {
+    margin-bottom: 8px;
+  }
+
+  .date-filter {
+    margin: 10px 0;
+  }
+
+  .date-filter label {
+    font-size: 14px;
+  }
+
+  .date-filter input[type="date"] {
+    font-size: 14px;
   }
 }
 
@@ -134,14 +149,27 @@ h1 {
   }
 
   .bills-table {
-    font-size: 12px;  /* Further reduce font size on smaller screens */
+    font-size: 12px;
   }
 
   .bills-table th, .bills-table td {
-    padding: 4px;  /* Further reduce padding */
+    padding: 4px;
   }
 
   .download-icon, .delete-icon {
-    font-size: 14px;  /* Further reduce icon size */
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .date-filter {
+    margin: 10px 0;
+  }
+
+  .date-filter label {
+    font-size: 12px;
+  }
+
+  .date-filter input[type="date"] {
+    font-size: 12px;
   }
 }
