@@ -459,6 +459,6 @@
   }
 
   .details-table th, .details-table td {
-    padding: 6px; /* Further reduce padding on very small screens */
+    padding: 6px; 
   }
 }
